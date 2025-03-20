@@ -5,6 +5,8 @@ const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPl
 const commonConfig = require("./webpack.common");
 const packageJson = require("../package.json");
 
+const domain = process.env.PRODUCTION_DOMAIN;
+
 const devConfig = {
   mode: "development",
   devServer: {
@@ -16,7 +18,9 @@ const devConfig = {
   plugins: [
     new ModuleFederationPlugin({
       name: "container",
-      remotes: { marketing: "marketing@http://127.0.0.1:8001/remoteEntry.js" },
+      remotes: {
+        marketing: `marketing@${domain}/marketing/latest/remoteEntry.js`,
+      },
       shared: packageJson.dependencies,
     }),
     new HtmlWebpackPlugin({
