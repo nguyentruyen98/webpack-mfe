@@ -8,7 +8,7 @@ const MarketingApp = () => {
   }, []);
   return (
     <div className="test" ref={ref}>
-      MarketingApps!!!s
+      MarketingApps!!!
     </div>
   );
 };
