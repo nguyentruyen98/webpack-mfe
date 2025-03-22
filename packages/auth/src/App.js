@@ -8,6 +8,8 @@ import SignUp from "./components/Signup";
 import SignIn from "./components/Signin";
 
 export default ({ history, onSignIn }) => {
+  console.log("auth");
+
   const generateClassName = createGenerateClassName({
     productionPrefix: "co",
   });

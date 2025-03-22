@@ -6,6 +6,8 @@ import Landing from "./components/Landing";
 import Pricing from "./components/Pricing";
 
 export default ({ history }) => {
+  console.log("marketing");
+
   return (
     <StylesProvider>
       <Router history={history}>

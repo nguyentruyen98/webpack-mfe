@@ -13,7 +13,7 @@ const LazyAuthApp = lazy(() => import("./components/AuthApp"));
 const App = () => {
   const generateClassName = createGenerateClassName({ productionPrefix: "co" });
   const [isSignIn, setIsSignIn] = useState(false);
-
+  console.log("container");
   return (
     <BrowserRouter>
       <StylesProvider generateClassName={generateClassName}>
