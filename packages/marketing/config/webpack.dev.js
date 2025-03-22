@@ -10,7 +10,10 @@ const devConfig = {
   devServer: {
     port: 8001,
     historyApiFallback: {
-      index: "index.html",
+      index: "/index.html",
+    },
+    output: {
+      publicPath: "http://localhost:8001/",
     },
   },
   plugins: [
@@ -18,7 +21,7 @@ const devConfig = {
       name: "marketing",
       filename: "remoteEntry.js",
       exposes: {
-        "./Marketing": "./src/bootstrap",
+        "./MarketingApp": "./src/bootstrap",
       },
       shared: packageJson.dependencies,
     }),
