@@ -6,10 +6,14 @@ import Landing from "./components/Landing";
 import Pricing from "./components/Pricing";
 
 export default ({ history }) => {
+  const generateClassName = createGenerateClassName({
+    productionPrefix: "ma",
+  });
+
   console.log("marketing");
 
   return (
-    <StylesProvider>
+    <StylesProvider generateClassName={generateClassName}>
       <Router history={history}>
         <Switch>
           <Route path="/pricing" component={Pricing} />

@@ -11,7 +11,7 @@ export default ({ history, onSignIn }) => {
   console.log("auth");
 
   const generateClassName = createGenerateClassName({
-    productionPrefix: "co",
+    productionPrefix: "au",
   });
   return (
     <StylesProvider generateClassName={generateClassName}>
